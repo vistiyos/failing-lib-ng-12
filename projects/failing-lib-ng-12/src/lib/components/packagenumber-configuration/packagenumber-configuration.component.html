@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+  <div class="packageNumber">
+    <div class="item">
+      <label class="xy-label">{{ textmodules.App.Components.PackageNumber.Title | translate }}</label>
+    </div>
+    <div class="item xy-text-right">
+      <xy-c-input type="string" minlength="4" maxLength="50" formControlName="inputPackageNumber"></xy-c-input>
+    </div>
+  </div>
+</form>

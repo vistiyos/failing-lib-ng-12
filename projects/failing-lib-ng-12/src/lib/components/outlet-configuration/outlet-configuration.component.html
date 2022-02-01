@@ -1,0 +1,33 @@
+<div *ngIf="userIsAuthorized" class="container">
+  <div *ngIf="!loadingConfiguration && init" class="content">
+    <label class="xy-h4 xy-d-block xy-pt-2">{{ textmodules.App.Components.OutletConfiguration.Title | translate }}</label>
+
+    <lib-packagenumber-configuration></lib-packagenumber-configuration>
+
+    <div class="item"></div>
+
+    <lib-invoicecode-configuration></lib-invoicecode-configuration>
+
+    <div class="item"></div>
+
+    <div class="xy-pt-2 xy-d-flex save-button-bar">
+      <span *ngIf="dirtyState" class="unsaved-changes xy-pr-1">
+          {{ textmodules.App.Components.OutletConfiguration.UnsavedChanges | translate }}
+        </span>
+      <button class="xy-base-button xy-bg-cyan xy-white xy-cyan-state xy-drop-shadow-sm ml-auto xy-mb-2 xy-mr-1"
+              [disabled]="(!canBeDeleted)"
+              (click)="deleteOutletConfiguration()">
+        {{ textmodules.App.Components.OutletConfiguration.DeleteOutletConfiguration | translate }}
+      </button>
+      <button class="xy-base-button xy-bg-cyan xy-white xy-cyan-state xy-drop-shadow-sm ml-auto xy-mb-2"
+              [disabled]="(!dirtyState || !inputIsValid)"
+              (click)="saveConfiguration()">
+        {{ textmodules.App.Components.OutletConfiguration.SaveConfigurationBtn | translate }}
+      </button>
+    </div>
+  </div>
+
+  <div class="loading-indicator" *ngIf="loadingConfiguration">
+    <p-progressSpinner></p-progressSpinner>
+  </div>
+</div>

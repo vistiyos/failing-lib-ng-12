@@ -1,0 +1,15 @@
+{
+  "name": "failing-lib-ng-12",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
+    "primeng": "10.0.3",
+    "rxjs": "6.6.3"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

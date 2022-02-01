@@ -1,0 +1,33 @@
+.invoiceCode {
+  display: grid;
+  gap: 0.4rem;
+  grid-template-columns: 1fr auto;
+  padding-top: 0.5rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    border-radius: 4px;
+
+    .timespan-inputs {
+      display: inline-flex;
+      height: 100%;
+      align-items: flex-end;
+
+      & > *:not(:first-child) {
+          margin-left: 0.4rem;
+      }
+    }
+
+    .label-long {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      @media (min-width: 640px) {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

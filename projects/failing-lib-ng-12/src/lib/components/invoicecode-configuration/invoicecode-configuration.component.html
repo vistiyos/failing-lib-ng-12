@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+  <div class="invoiceCode">
+    <div class="item">
+      <label class="xy-label">{{ textmodules.App.Components.InvoiceCode.Title | translate }}</label>
+    </div>
+    <div class="item xy-text-left">
+      <xy-c-input type="string" minlength="1" maxLength="12" formControlName="inputInvoiceCode"></xy-c-input>
+    </div>
+  </div>
+ </form>
